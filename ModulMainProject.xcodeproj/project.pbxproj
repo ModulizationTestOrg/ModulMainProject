@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D305FEAD5BE7BF40C06756C /* libPods-ModulMainProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0232DB5A28C961CA16BB64D /* libPods-ModulMainProject.a */; };
 		E11EAFA020CE55BC000B19F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E11EAF9F20CE55BC000B19F1 /* AppDelegate.m */; };
 		E11EAFA320CE55BC000B19F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11EAFA220CE55BC000B19F1 /* ViewController.m */; };
 		E11EAFA620CE55BC000B19F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11EAFA420CE55BC000B19F1 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BEF4AD4F998DD911F1B23AA /* Pods-ModulMainProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModulMainProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModulMainProject/Pods-ModulMainProject.debug.xcconfig"; sourceTree = "<group>"; };
+		A953EA0D42D3F5A1EF39807C /* Pods-ModulMainProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModulMainProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModulMainProject/Pods-ModulMainProject.release.xcconfig"; sourceTree = "<group>"; };
+		C0232DB5A28C961CA16BB64D /* libPods-ModulMainProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ModulMainProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11EAF9B20CE55BC000B19F1 /* ModulMainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModulMainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11EAF9E20CE55BC000B19F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E11EAF9F20CE55BC000B19F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D305FEAD5BE7BF40C06756C /* libPods-ModulMainProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AE932EEB62DD61DDB20A309 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BEF4AD4F998DD911F1B23AA /* Pods-ModulMainProject.debug.xcconfig */,
+				A953EA0D42D3F5A1EF39807C /* Pods-ModulMainProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0E5B21F0459FFB66708A9A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0232DB5A28C961CA16BB64D /* libPods-ModulMainProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E11EAF9220CE55BC000B19F1 = {
 			isa = PBXGroup;
 			children = (
 				E11EAF9D20CE55BC000B19F1 /* ModulMainProject */,
 				E11EAF9C20CE55BC000B19F1 /* Products */,
+				8AE932EEB62DD61DDB20A309 /* Pods */,
+				C0E5B21F0459FFB66708A9A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E11EAFB120CE55BE000B19F1 /* Build configuration list for PBXNativeTarget "ModulMainProject" */;
 			buildPhases = (
+				9BDAEDF5933AE99AC702D645 /* [CP] Check Pods Manifest.lock */,
 				E11EAF9720CE55BC000B19F1 /* Sources */,
 				E11EAF9820CE55BC000B19F1 /* Frameworks */,
 				E11EAF9920CE55BC000B19F1 /* Resources */,
@@ -135,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BDAEDF5933AE99AC702D645 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModulMainProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E11EAF9720CE55BC000B19F1 /* Sources */ = {
@@ -281,15 +327,13 @@
 		};
 		E11EAFB220CE55BE000B19F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEF4AD4F998DD911F1B23AA /* Pods-ModulMainProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJHRVPW773;
 				INFOPLIST_FILE = ModulMainProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huhsx.ModulMainProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,15 +342,13 @@
 		};
 		E11EAFB320CE55BE000B19F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A953EA0D42D3F5A1EF39807C /* Pods-ModulMainProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJHRVPW773;
 				INFOPLIST_FILE = ModulMainProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huhsx.ModulMainProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
