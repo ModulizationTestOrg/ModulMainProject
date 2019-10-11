@@ -1,20 +1,22 @@
 PODS:
-  - CTMediator (18)
-  - huhsxModulA (1)
-  - huhsxModulB (1)
-  - huhsxModulCategoryB (1):
+  - CTMediator (25)
+  - huhsxModulA (0.0.5):
     - CTMediator
-  - huhsxModulCategotyA (1):
+    - huhsxModulCategoryB
+  - huhsxModulB (5)
+  - huhsxModulCategoryB (0.0.3):
+    - CTMediator
+  - huhsxModulCategotyA (3):
     - CTMediator
 
 DEPENDENCIES:
-  - huhsxModulA
+  - huhsxModulA (~> 0.0.5)
   - huhsxModulB
-  - huhsxModulCategoryB
+  - huhsxModulCategoryB (~> 0.0.3)
   - huhsxModulCategotyA
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - CTMediator
   https://github.com/ModulizationTestOrg/huhsxSpecs.git:
     - huhsxModulA
@@ -23,12 +25,12 @@ SPEC REPOS:
     - huhsxModulCategotyA
 
 SPEC CHECKSUMS:
-  CTMediator: 420e9d90f9f1fd740caf2238ed7ed64dc621c5b7
-  huhsxModulA: 8ec2ac8f96b0c24f55f6b3b5e10911474a45505c
-  huhsxModulB: 877643fb3023a11d047853ca99caf9beff9b8ec9
-  huhsxModulCategoryB: ad6f118e961a4a06f78421683d61c15adb43aab8
-  huhsxModulCategotyA: 82b43b99533c91d4b1e181affe93d403c66f066d
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
+  huhsxModulA: 2fabc3bfb967e4ce520988dbd578aeeb415920e4
+  huhsxModulB: e76ad98feb0b867a96bf048986fad3732e3d22cd
+  huhsxModulCategoryB: 3f2a081cab62fc013da833fc109a0a23564fb433
+  huhsxModulCategotyA: 7ebdd02aeccd862d575e9faacfd22abedee16dd2
 
-PODFILE CHECKSUM: e5b605bbeeaea253dfc117615a137b3a3e64065c
+PODFILE CHECKSUM: c26eb46a03db47410cf3362a80b614d21cd65bef
 
-COCOAPODS: 1.5.0.beta.1
+COCOAPODS: 1.7.5

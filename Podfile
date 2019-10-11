@@ -9,9 +9,9 @@ target 'ModulMainProject' do
   # use_frameworks!
 
   # Pods for ModulMainProject
-  pod 'huhsxModulA'
-  pod 'huhsxModulCategotyA'
-  pod 'huhsxModulB'
-  pod 'huhsxModulCategoryB'
+  pod 'huhsxModulA', '~> 0.0.5'
+  pod 'huhsxModulCategotyA', '~> 3'
+  pod 'huhsxModulB', '~> 5'
+  pod 'huhsxModulCategoryB', '~> 0.0.3'
 
 end
